@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full bg-transparent relative z-10">
+    <nav className="absolute top-3 left-0 w-full bg-transparent relative z-10">
       {/* Background Image Overlay */}
       <div className="inset-0 bg-black opacity-30 z-0 pointer-events-none  bg-cover bg-center mix-blend-multiply"></div>
 

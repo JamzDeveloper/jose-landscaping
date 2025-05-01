@@ -1,16 +1,19 @@
 import AnimatedStatsSection from "@/components/animate-stats";
 import Navbar from "@/components/navbar";
+import AboutUsSection from "@/sections/about";
+import ProjectSection from "@/sections/projects";
+import ServiceSection from "@/sections/services";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <div>
+        <div className="relative h-dvh">
           <div
             className="relative"
             style={{
-              height: "81dvh",
+              height: "80dvh",
               backgroundImage: "url('/images/background-banner.png')",
               backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
               backgroundPosition: "center", // Centra la imagen en el contenedor
@@ -19,12 +22,12 @@ export default function Home() {
             {/* La imagen ahora es un fondo */}
             <Navbar />
 
-            <div className=" w-750 ml-35 mt-60">
+            <div className=" ml-35 mt-60">
               <h1 className="text-6xl font-medium text-white w-140">
                 Transform your garden into a personalized oasis
               </h1>
 
-              <p className="text-lg text-white mt-6">
+              <p className="text-lg text-white mt-6 ">
                 Professional landscaping, irrigation, pruning, structures and
                 more.
               </p>
@@ -32,9 +35,8 @@ export default function Home() {
 
               </button> */}
             </div>
-            <div className="mt-55 w-300 ml-20">
-
-            <AnimatedStatsSection></AnimatedStatsSection>
+            <div className="mt-75 w-300 ml-20">
+              <AnimatedStatsSection></AnimatedStatsSection>
             </div>
             {/** profile image */}
             <div
@@ -58,7 +60,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div></div>
+        <div className="px-35">
+          <ServiceSection />
+        </div>
+        <div className="mt-20 px-35  ">
+          <ProjectSection />
+        </div>
+        <div className="">
+        <AboutUsSection />
+        </div>
       </main>
 
       <footer></footer>

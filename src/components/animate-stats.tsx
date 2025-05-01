@@ -64,9 +64,9 @@ const AnimatedStatItem: FC<StatItemProps> = ({ number, suffix, description, dura
       <div className="text-green-800 text-6xl md:text-7xl font-bold relative">
         {count}
         {suffix}
-        <div className="absolute -bottom-3 left-0 w-full max-w-[100px] h-1 bg-blue-500"></div>
+        {/* <div className="absolute -bottom-3 left-0 w-full max-w-[100px] h-1 bg-blue-500"></div> */}
       </div>
-      <p className="text-gray-500 text-xl md:text-2xl mt-6">{description}</p>
+      <p className="text-gray-500 text-xl md:text-2xl mt-3">{description}</p>
     </div>
   )
 }
@@ -79,7 +79,7 @@ export default function AnimatedStatsSection() {
   ]
 
   return (
-    <section className="py-16 ">
+    <section className="py-16  relative">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {stats.map((stat, index) => (
