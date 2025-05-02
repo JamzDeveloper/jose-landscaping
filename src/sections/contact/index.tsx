@@ -3,9 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 
-interface ContactSectionProps {}
 
-const ContactSection: React.FC<ContactSectionProps> = () => {
+const ContactSection: React.FC= () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

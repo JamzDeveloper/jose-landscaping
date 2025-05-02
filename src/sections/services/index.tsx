@@ -6,7 +6,7 @@ import { data } from "@/data/services";
 interface ServiceSectionProps {}
 
 const ServiceSection: React.FC<ServiceSectionProps> = () => {
-  const { width } = useWindowSize();
+  // const { width } = useWindowSize();
 
   const responsiveData = data.map((item) => {
     // let height = 300;

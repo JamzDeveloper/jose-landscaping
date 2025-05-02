@@ -5,7 +5,6 @@ import ContactSection from "@/sections/contact";
 import LandscapingFooter from "@/sections/footer";
 import ProjectSection from "@/sections/projects";
 import ServiceSection from "@/sections/services";
-import Image from "next/image";
 import MapWrapper from "@/sections/map";
 
 export default function Home() {

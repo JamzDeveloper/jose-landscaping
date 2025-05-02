@@ -1,8 +1,6 @@
 import { CustomButton } from "@/components/button";
 
-interface ProjectSectionProps {}
-
-const ProjectSection: React.FC<ProjectSectionProps> = () => {
+const ProjectSection: React.FC = () => {
   return (
     <section>
       <div className="flex justify-between ">
