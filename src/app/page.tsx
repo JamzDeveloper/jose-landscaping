@@ -1,9 +1,12 @@
 import AnimatedStatsSection from "@/components/animate-stats";
 import Navbar from "@/components/navbar";
 import AboutUsSection from "@/sections/about";
+import ContactSection from "@/sections/contact";
+import LandscapingFooter from "@/sections/footer";
 import ProjectSection from "@/sections/projects";
 import ServiceSection from "@/sections/services";
 import Image from "next/image";
+import MapWrapper from "@/sections/map";
 
 export default function Home() {
   return (
@@ -67,11 +70,21 @@ export default function Home() {
           <ProjectSection />
         </div>
         <div className="">
-        <AboutUsSection />
+          <AboutUsSection />
+        </div>
+        <div>
+          <ContactSection></ContactSection>
+        </div>
+        <div className="relative flex justify-center py-30">
+          <div style={{ width: "80%" }}>
+            <MapWrapper />
+          </div>
         </div>
       </main>
 
-      <footer></footer>
+      <footer>
+        <LandscapingFooter></LandscapingFooter>
+      </footer>
     </div>
   );
 }
