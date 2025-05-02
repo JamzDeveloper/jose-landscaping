@@ -19,6 +19,10 @@ export const ContainerImage = ({
 }: imageProperty) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  console.log(href)
+  const navigationPage=()=>{
+
+  }
   return (
     <div
       className="relative rounded-xl overflow-hidden shadow-lg transition-all duration-300"
@@ -46,7 +50,7 @@ export const ContainerImage = ({
         />
 
         <div className="absolute top-3 right-3 z-10">
-          <button className="bg-white/90 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+          <button className="bg-white/90 hover:bg-white w-10 h-10 rounded-full flex items-center justify-center transition-colors" onClick={navigationPage}>
             <Plus className="w-5 h-5 text-green-700" />
           </button>
         </div>

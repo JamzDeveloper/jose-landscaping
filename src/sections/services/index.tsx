@@ -1,5 +1,5 @@
 "use client";
-import useWindowSize from "@/hooks/useWindowSize";
+// import useWindowSize from "@/hooks/useWindowSize";
 import PersonalityContainer from "./personality";
 import { data } from "@/data/services";
 
