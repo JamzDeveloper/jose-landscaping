@@ -3,9 +3,8 @@
 import PersonalityContainer from "./personality";
 import { data } from "@/data/services";
 
-interface ServiceSectionProps {}
 
-const ServiceSection: React.FC<ServiceSectionProps> = () => {
+const ServiceSection: React.FC = () => {
   // const { width } = useWindowSize();
 
   const responsiveData = data.map((item) => {
