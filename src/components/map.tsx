@@ -1,9 +1,8 @@
 "use client";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Circle } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 
-// Solución para el problema de iconos en Leaflet con Next.js
 const customIcon = new Icon({
   iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
   iconRetinaUrl:
@@ -15,7 +14,6 @@ const customIcon = new Icon({
   shadowSize: [41, 41],
 });
 
-// Definición de tipos para las ubicaciones
 type Location = {
   id: number;
   name: string;
@@ -24,28 +22,7 @@ type Location = {
 };
 
 export default function MapComponent() {
-  // Estado para almacenar las ubicaciones
-  // const [locations, setLocations] = useState<Location[]>([
-  //   {
-  //     id: 1,
-  //     name: "Madrid",
-  //     position: [36.158712, -115.151664],
-  //     description: "Las Vegas",
-  //   },
-  //   // {
-  //   //   id: 2,
-  //   //   name: "Barcelona",
-  //   //   position: [41.3851, 2.1734],
-  //   //   description: "Ciudad costera en Cataluña",
-  //   // },
-  //   // {
-  //   //   id: 3,
-  //   //   name: "Valencia",
-  //   //   position: [39.4699, -0.3763],
-  //   //   description: "Ciudad del Mediterráneo",
-  //   // },
-  // ])
-  const locations:Location[] = [
+  const locations: Location[] = [
     {
       id: 1,
       name: "USA",
@@ -54,12 +31,10 @@ export default function MapComponent() {
     },
   ];
 
-  // Posición central del mapa
   const center: [number, number] = [36.158712, -115.151664];
 
   return (
     <div className="w-full h-screen max-h-[600px] rounded-lg overflow-hidden shadow-lg">
-      {/* El componente MapContainer debe renderizarse solo en el cliente */}
       <MapContainer
         center={center}
         zoom={6}
@@ -71,7 +46,12 @@ export default function MapComponent() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* Renderizar marcadores para cada ubicación */}
+        <Circle
+          center={center}
+          radius={18000} // en metros
+          pathOptions={{ color: "blue", fillOpacity: 0.2 }}
+        />
+
         {locations.map((location) => (
           <Marker
             key={location.id}

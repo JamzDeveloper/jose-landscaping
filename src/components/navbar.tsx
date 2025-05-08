@@ -39,9 +39,9 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white">
+          {/* <button className="md:hidden text-white">
             <Menu size={24} />
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu */}

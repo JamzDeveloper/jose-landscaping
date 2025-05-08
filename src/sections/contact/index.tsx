@@ -2,9 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-
-
-const ContactSection: React.FC= () => {
+const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -25,81 +23,82 @@ const ContactSection: React.FC= () => {
     console.log(formData);
   };
   return (
-    <div className="bg-[#F2F2F2]  h-screen  flex items-center">
-      <div className="bg-red-50 ">
-        <Image
-          src={"/images/contact-image.png"}
-          height={832}
-          width={807}
-          alt="contact"
-        />
-      </div>
-      {/* Middle: Contact Form */}
-      <div
-        className="w-full md:w-2/5 mb-8 md:mb-0  "
-        style={{ height: "60%", marginLeft: "-350px" }}
-      >
-        <h2 className="text-6xl font-bold text-[#3a6351] mb-10">Contact</h2>
+    <div className="bg-[#F2F2F2]  flex flex-col lg:flex-row items-center justify-between  py-10 gap-10 overflow-hidden">
+      <div className="relative flex  items-center ">
+        <div className=" hidden lg:block ">
+          <Image
+            src={"/images/contact-image.png"}
+            height={832}
+            width={807}
+            alt="cover"
+          />
+        </div>
+        {/* Middle: Contact Form */}
+        <div className=" md:w-2/5 mb-8 md:mb-0 lg:ml-[-200px] lg:h-[60%] px-6 lg:p-0">
+          <h2 className="text-3xl lg:text-6xl font-bold text-[#3a6351] mb-10">
+            Contact
+          </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-8 mt-20">
-          <div className="grid grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="space-y-8 mt-20 ">
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="FIRST NAME"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-base tracking-wider uppercase"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="LAST NAME"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-base tracking-wider uppercase"
+                />
+              </div>
+            </div>
+
             <div>
               <input
-                type="text"
-                name="firstName"
-                placeholder="FIRST NAME"
-                value={formData.firstName}
+                type="email"
+                name="email"
+                placeholder="E-MAIL"
+                value={formData.email}
                 onChange={handleChange}
-                className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-xl tracking-wider uppercase"
+                className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-base tracking-wider uppercase"
               />
             </div>
+
             <div>
-              <input
-                type="text"
-                name="lastName"
-                placeholder="LAST NAME"
-                value={formData.lastName}
+              <textarea
+                name="message"
+                placeholder="MESSAGE"
+                value={formData.message}
                 onChange={handleChange}
-                className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-xl tracking-wider uppercase"
+                rows={2}
+                style={{ height: "177px" }}
+                className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-base tracking-wider uppercase"
               />
             </div>
-          </div>
-
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="E-MAIL"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-xl tracking-wider uppercase"
-            />
-          </div>
-
-          <div>
-            <textarea
-              name="message"
-              placeholder="MESSAGE"
-              value={formData.message}
-              onChange={handleChange}
-              rows={2}
-              style={{ height: "177px" }}
-              className="w-full  border-b border-gray-300 py-2 focus:outline-none focus:border-[#3a6351] text-xl tracking-wider uppercase resize-none"
-            />
-          </div>
-
-          <div className="pt-4 flex justify-center">
-            <button
-              type="submit"
-              className="w-md h-[73] bg-[#3a6351] text-white py-2.5 rounded-full text-xl uppercase tracking-wider  shadow-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-            >
-              Send
-            </button>
-          </div>
-        </form>
+            <div className="pt-4 flex justify-center">
+              <button
+                type="submit"
+                className="w-40 lg:w-md h-[60px] lg:h-[73px] bg-[#3a6351] text-white py-2.5 rounded-full text-base lg:text-xl uppercase tracking-wide lg:tracking-wider shadow-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-      <div className="ml-20 ">
-        <div className="max-w-xs bg-[#3a6351] text-white p-6 rounded-2xl shadow-2xl h-[478]  pl-10 pr-10 ">
+
+      <div className="lg:ml-20  lg:mr-40">
+        <div className="w-full max-w-xs lg:max-w-xs bg-[#3a6351] text-white p-6 rounded-2xl shadow-2xl h-[478] px-10">
           <h2 className="text-xl font-medium mb-5 mt-[36]">
             Hi! We are always here to help you.
           </h2>
