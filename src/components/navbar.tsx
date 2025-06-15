@@ -1,15 +1,15 @@
 import Link from "next/link";
 // import { Menu } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ textColor = "#fff" }: { textColor?: string }) {
   //   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Project Gallery", href: "/gallery" },
-    { name: "About us", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/", hrefId: "" },
+    { name: "Services", href: "/services", hrefId: "#services" },
+    { name: "Project Gallery", href: "/gallery", hrefId: "#gallery" },
+    { name: "About us", href: "/about", hrefId: "#about" },
+    { name: "Contact", href: "/contact", hrefId: "#contact" },
   ];
 
   return (
@@ -17,10 +17,13 @@ export default function Navbar() {
       {/* Background Image Overlay */}
       <div className="inset-0 bg-black opacity-30 z-0 pointer-events-none  bg-cover bg-center mix-blend-multiply"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className={`container mx-auto px-4 relative z-10 `}>
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="text-white text-2xl font-semibold">
+          <div
+            className="text-white text-2xl font-semibold "
+            style={{ color: textColor }}
+          >
             Jose Landscaping
           </div>
 
@@ -29,8 +32,9 @@ export default function Navbar() {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                href={item.hrefId}
                 className="text-white hover:text-green-200 transition-colors"
+                style={{ color: textColor }}
               >
                 {item.name}
               </Link>

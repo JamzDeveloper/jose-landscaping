@@ -25,12 +25,17 @@ export const ContainerImage = ({
 
   return (
     <div
-      className="relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 w-full"
+      className="relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 w-full "
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+     onClick={() => {
+    window.location.href = "/services";
+    
+  }}
       style={{
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.15)",
         transform: isHovered ? "scale(1.02)" : "scale(1)",
+        cursor:"pointer"
       }}
     >
       {/* Main image with aspect ratio */}

@@ -93,9 +93,9 @@ const AnimatedStatItem: FC<StatItemProps> = ({
 
 export default function AnimatedStatsSection() {
   const stats = [
-    { number: 1200, suffix: "+", description: "Complete landscape projects" },
-    { number: 950, suffix: "+", description: "Satisfied customers" },
-    { number: 150, suffix: "+", description: "Residential areas served" },
+    { number: 455, suffix: "+", description: "Complete landscape projects" },
+    { number: 600, suffix: "+", description: "Satisfied customers" },
+    { number: 7, suffix: "+", description: "Residential areas served" },
   ];
 
   return (
@@ -115,21 +115,19 @@ export default function AnimatedStatsSection() {
     //   </div>
     // </section>
     <section className="py-8 md:py-16 relative overflow-x-auto">
-    <div className="container mx-auto px-4">
-      <div className="flex flex-nowrap gap-4 md:gap-12">
-        {stats.map((stat, index) => (
-          <AnimatedStatItem
-            key={index}
-            number={stat.number}
-            suffix={stat.suffix}
-            description={stat.description}
-            duration={2000 + index * 500} // Stagger the animations
-          />
-        ))}
+      <div className="container mx-auto px-4">
+        <div className="flex flex-nowrap gap-4 md:gap-12">
+          {stats.map((stat, index) => (
+            <AnimatedStatItem
+              key={index}
+              number={stat.number}
+              suffix={stat.suffix}
+              description={stat.description}
+              duration={2000 + index * 500} // Stagger the animations
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-  
-
+    </section>
   );
 }

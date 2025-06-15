@@ -24,6 +24,7 @@ const PersonalityContainer: React.FC<PersonalityContainerProps> = ({
                   width={data.width}
                   image={data.image}
                   title={data.title}
+                  
                 />
               </div>
             );

@@ -16,12 +16,25 @@ const ContactSection: React.FC = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+
+    const { firstName, lastName, email, message } = formData;
+
+    const subject = encodeURIComponent(
+      `New Landscaping Inquiry from ${firstName} ${lastName}`
+    );
+    const body = encodeURIComponent(
+      `I’m interested in a garden redesign project:\n\n` +
+        `Name: ${firstName} ${lastName}\n` +
+        `Email: ${email}\n\n` +
+        `Message:\n${message}`
+    );
+
+    const mailtoLink = `mailto:jamzdeveloper@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
   };
+
   return (
     <div className="bg-[#F2F2F2]  flex flex-col lg:flex-row items-center justify-between  py-10 gap-10 overflow-hidden">
       <div className="relative flex  items-center ">
@@ -97,8 +110,8 @@ const ContactSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="lg:ml-20  lg:mr-40">
-        <div className="w-full max-w-xs lg:max-w-xs bg-[#3a6351] text-white p-6 rounded-2xl shadow-2xl h-[478] px-10">
+      <div className="lg:ml-20  lg:mr-40 ">
+        <div className="w-full max-w-xs lg:max-w-xs bg-[#3a6351] text-white p-6 rounded-2xl shadow-2xl h-[490] px-10 ">
           <h2 className="text-xl font-medium mb-5 mt-[36]">
             Hi! We are always here to help you.
           </h2>
@@ -121,7 +134,7 @@ const ContactSection: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-black font-bold">Hotline:</p>
-                <p className="text-sm text-black">+971 56 498 3456</p>
+                <p className="text-sm text-black">7029453406</p>
               </div>
             </div>
 
@@ -142,7 +155,7 @@ const ContactSection: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm  text-black font-bold">SMS / WhatsApp:</p>
-                <p className="text-sm text-black">+971 55 343 6431</p>
+                <p className="text-sm text-black">7029453406</p>
               </div>
             </div>
 
@@ -172,16 +185,18 @@ const ContactSection: React.FC = () => {
                   />
                 </svg>
               </div>
-              <div>
+              <div className="max-w-[180px]">
                 <p className="text-sm text-black font-bold">Email:</p>
-                <p className="text-sm text-black">support@gmail.com</p>
+                <p className="text-sm text-black break-words">
+                  josegardeninglasvegas@gmail.com
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="pt-2  border-t  border-t-2 border-white">
+          <div className="pt-2  border-t  border-t-2 border-white ">
             <p className="text-xs mb-3 mt-4">Connect with us</p>
-            <div className="flex gap-4 justify-between">
+            <div className="flex gap-4 justify-between ">
               <a
                 href="#"
                 aria-label="Facebook"

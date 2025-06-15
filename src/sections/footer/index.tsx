@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Facebook, Instagram, Twitter, Music } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Instagram, Twitter, Music } from "lucide-react";
 
 export default function LandscapingFooter() {
   return (
@@ -14,7 +14,8 @@ export default function LandscapingFooter() {
               <h2 className="text-2xl font-medium">Service</h2>
             </div>
             <p className="text-sm max-w-xs">
-              We create sustainable and beautiful outdoor spaces tailored to your needs.
+              We create sustainable and beautiful outdoor spaces tailored to
+              your needs.
             </p>
             <div className="flex items-center gap-2 text-sm pt-4">
               <svg
@@ -42,7 +43,7 @@ export default function LandscapingFooter() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span>123 Greenway Blvd, Suite 201, Plant, FL 33567, USA</span>
+              <span>Las vegas, USA</span>
             </div>
           </div>
 
@@ -56,22 +57,22 @@ export default function LandscapingFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="hover:underline">
+                <Link href="/#about" className="hover:underline">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/project-gallery" className="hover:underline">
+                <Link href="/#gallery" className="hover:underline">
                   Project Gallery
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:underline">
+                <Link href="/#services" className="hover:underline">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:underline">
+                <Link href="/#contact" className="hover:underline">
                   Contact
                 </Link>
               </li>
@@ -83,27 +84,27 @@ export default function LandscapingFooter() {
             <h3 className="font-medium mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/services/residential" className="hover:underline">
+                <Link href="/services" className="hover:underline">
                   Residential landscaping
                 </Link>
               </li>
               <li>
-                <Link href="/services/patio" className="hover:underline">
+                <Link href="/services" className="hover:underline">
                   Patio and decorative stones
                 </Link>
               </li>
               <li>
-                <Link href="/services/planting" className="hover:underline">
+                <Link href="/services" className="hover:underline">
                   Planting and maintenance
                 </Link>
               </li>
               <li>
-                <Link href="/services/furniture" className="hover:underline">
+                <Link href="/services" className="hover:underline">
                   Outdoor furniture solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services/architecture" className="hover:underline">
+                <Link href="/services" className="hover:underline">
                   Landscape architecture design
                 </Link>
               </li>
@@ -115,17 +116,17 @@ export default function LandscapingFooter() {
             <h3 className="font-medium mb-4">Legal</h3>
             <ul className="space-y-2 text-sm mb-6">
               <li>
-                <Link href="/terms" className="hover:underline">
+                <Link href="/#" className="hover:underline">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:underline">
+                <Link href="/#" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="hover:underline">
+                <Link href="/#" className="hover:underline">
                   Cookies Policy
                 </Link>
               </li>
@@ -149,7 +150,7 @@ export default function LandscapingFooter() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>+1 555 123-4567</span>
+                <span>7029453406</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <svg
@@ -175,16 +176,22 @@ export default function LandscapingFooter() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>support@joselands.com</span>
+                <span>josegardeninglasvegas@gmail.com</span>
               </div>
             </div>
 
             <div className="flex gap-4">
               <Link href="https://facebook.com" aria-label="Facebook">
-                <Facebook size={20} className="text-white hover:text-gray-200" />
+                <Facebook
+                  size={20}
+                  className="text-white hover:text-gray-200"
+                />
               </Link>
               <Link href="https://instagram.com" aria-label="Instagram">
-                <Instagram size={20} className="text-white hover:text-gray-200" />
+                <Instagram
+                  size={20}
+                  className="text-white hover:text-gray-200"
+                />
               </Link>
               <Link href="https://twitter.com" aria-label="Twitter">
                 <Twitter size={20} className="text-white hover:text-gray-200" />
@@ -201,5 +208,5 @@ export default function LandscapingFooter() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
