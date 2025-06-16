@@ -23,7 +23,7 @@ const ProjectSection: React.FC = () => {
       </div>
 
       {/* Área de proyectos */}
-      <div className="mt-16 w-full bg-red-50 rounded-lg">
+      <div className="mt-16 w-full  rounded-lg">
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -173,7 +173,7 @@ const ProjectSection: React.FC = () => {
               ></Image>
             </div>
           </SwiperSlide>
-              <SwiperSlide>
+          <SwiperSlide>
             <div className="relative w-full h-[300px]">
               <Image
                 src="/images/carousel/image 15.png"
@@ -182,7 +182,7 @@ const ProjectSection: React.FC = () => {
               ></Image>
             </div>
           </SwiperSlide>
-              <SwiperSlide>
+          <SwiperSlide>
             <div className="relative w-full h-[300px]">
               <Image
                 src="/images/carousel/image 16.png"
@@ -191,7 +191,6 @@ const ProjectSection: React.FC = () => {
               ></Image>
             </div>
           </SwiperSlide>
-            
         </Swiper>
       </div>
       {/* Botón */}

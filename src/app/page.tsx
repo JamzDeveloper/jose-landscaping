@@ -10,8 +10,6 @@ import MapWrapper from "@/sections/map";
 import useWindowSize from "@/hooks/useWindowSize";
 import Image from "next/image";
 
-
-
 export default function Home() {
   const { width } = useWindowSize();
 
@@ -51,7 +49,6 @@ export default function Home() {
           >
             {width > 250 ? (
               <Navbar />
-              
             ) : (
               <div className="text-white ml-10 pt-10 text-2xl font-semibold">
                 <h1>Jose Landscaping</h1>
@@ -96,11 +93,14 @@ export default function Home() {
             <AnimatedStatsSection></AnimatedStatsSection>
           </div>
         </div>
-        <div className="container mx-auto px-4 mt-8 md:px-10 mt-10 lg:px-20" id="services">
-        <ServiceSection />
+        <div
+          className="container mx-auto px-4 mt-8 md:px-10 mt-10 lg:px-20"
+          id="services"
+        >
+          <ServiceSection />
         </div>
         <div className="mt-20 px-4 sm:px-6 md:px-10 lg:px-20" id="gallery">
-        <ProjectSection />
+          <ProjectSection />
         </div>
         <div className="" id="about">
           <AboutUsSection />
