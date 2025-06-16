@@ -7,7 +7,6 @@ import NavbarInternal from "@/components/internalNavbar";
 import PortfolioCard from "@/components/portfolio-card";
 
 export default function LandscapingPortfolio() {
-  const { width } = useWindowSize();
 
   return (
     <div className="min-h-screen bg-gray-50 w-full m-0">
