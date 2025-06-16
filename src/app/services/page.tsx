@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Facebook, Instagram, Twitter } from "lucide-react";
 import LandscapingFooter from "@/sections/footer";
 import useWindowSize from "@/hooks/useWindowSize";
 import NavbarInternal from "@/components/internalNavbar";
