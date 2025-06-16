@@ -1,5 +1,10 @@
+"use client";
+import Image from "next/image";
 import { CustomButton } from "@/components/button";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 const ProjectSection: React.FC = () => {
   return (
     <section className="px-6 sm:px-10 md:px-16 lg:px-20 py-16 bg-white">
@@ -18,8 +23,177 @@ const ProjectSection: React.FC = () => {
       </div>
 
       {/* Área de proyectos */}
-      <div className="mt-16 h-[400px] bg-red-50 rounded-lg"></div>
-
+      <div className="mt-16 w-full bg-red-50 rounded-lg">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 6.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image src="/images/image-banner.png" fill alt="image"></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 1.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 2.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 3.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 4.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 5.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 6.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 7.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 8.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 9.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 10.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 11.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 12.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 13.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 14.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+              <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 15.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+              <SwiperSlide>
+            <div className="relative w-full h-[300px]">
+              <Image
+                src="/images/carousel/image 16.png"
+                fill
+                alt="image"
+              ></Image>
+            </div>
+          </SwiperSlide>
+            
+        </Swiper>
+      </div>
       {/* Botón */}
       <div className="mt-10 flex justify-center w-full">
         <CustomButton />

@@ -10,6 +10,8 @@ import MapWrapper from "@/sections/map";
 import useWindowSize from "@/hooks/useWindowSize";
 import Image from "next/image";
 
+
+
 export default function Home() {
   const { width } = useWindowSize();
 

@@ -31,7 +31,7 @@ const ContactSection: React.FC = () => {
         `Message:\n${message}`
     );
 
-    const mailtoLink = `mailto:jamzdeveloper@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:josegardeninglasvegas@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
   };
 
