@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import LandscapingFooter from "@/sections/footer";
-import useWindowSize from "@/hooks/useWindowSize";
 import NavbarInternal from "@/components/internalNavbar";
 import PortfolioCard from "@/components/portfolio-card";
 
