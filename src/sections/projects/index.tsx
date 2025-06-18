@@ -5,7 +5,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import useWindowSize from "@/hooks/useWindowSize";
 const ProjectSection: React.FC = () => {
+  const { width } = useWindowSize();
+
+  const getSlidesPerView = () => {
+    if (width >= 1280) return 4;
+    if (width >= 1024) return 3;
+    if (width >= 768) return 2;
+    return 1;
+  };
+
   return (
     <section className="px-6 sm:px-10 md:px-16 lg:px-20 py-16 bg-white">
       {/* Contenedor del título y descripción */}
@@ -25,7 +35,7 @@ const ProjectSection: React.FC = () => {
       {/* Área de proyectos */}
       <div className="mt-16 w-full  rounded-lg">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={getSlidesPerView()}
           spaceBetween={30}
           pagination={{
             clickable: true,
