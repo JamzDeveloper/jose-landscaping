@@ -13,10 +13,8 @@ export default function LandscapingPortfolio() {
         <NavbarInternal textColor="rgba(0, 53, 15, 0.7)" />
       </div>
       {/* Masonry Grid Section */}
-      <div
-        className="container px-50 py-8 relative m-0"
-        style={{ maxWidth: "100%" }}
-      >
+      {/* Masonry Grid Section */}
+      <div className="container mx-auto px-4 py-8 relative" style={{ maxWidth: "100%" }}>
         {/* Overlay semi-transparente que cubre toda la sección */}
         <div
           className="absolute inset-0 w-full h-full bg-gradient-to-b from-gray-600/30 via-gray-400/50 to-white/30 pointer-events-none z-10"
