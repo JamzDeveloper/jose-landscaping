@@ -158,7 +158,7 @@ export default function LandscapingPortfolio() {
         </div>
 
         <div className="mt-10">
-          <h1 className="text-5xl font-[500]">Vegetation and grass</h1>
+          <h1 className="text-5xl font-[500] text-center">Vegetation and grass</h1>
         </div>
         <div className="mt-10" style={{ width: "50%" }}>
           <p className="text-center text-normal">
