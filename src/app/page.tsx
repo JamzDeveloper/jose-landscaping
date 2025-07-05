@@ -33,43 +33,39 @@ export default function Home() {
           }}
         >
           <div
-            className={`relative sm:bg-cover ${
-              width < 1165 &&
-              "bg-cover bg-center before:absolute before:inset-0 before:bg-black/50 before:"
-            }`}
+            className="relative bg-cover bg-center before:absolute before:inset-0 before:bg-black before:opacity-30 before:z-10"
             style={{
               height: "80dvh",
               backgroundImage: `url(${
                 width > 1165
-                  ? " /images/background-banner.png"
-                  : "/images/5f6b62eaf96992ddfa4ffd0195c2bce359ebca31.jpg"
+                  ? "/images/background-banner-2.png"
+                  : "/images/background-banner-2.png"
               })`,
               backgroundSize: "cover",
             }}
           >
+            {/* Navbar o Título para móviles */}
             {width > 250 ? (
               <Navbar />
             ) : (
-              <div className="text-white ml-10 pt-10 text-2xl font-semibold">
+              <div className="text-white ml-10 pt-10 text-2xl font-semibold relative z-20">
                 <h1>Jose Landscaping</h1>
               </div>
             )}
 
-            <div className="ml-5 sm:ml-10 md:ml-20 lg:ml-35 mt-20 sm:mt-40 md:mt-60 z-21 relative">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white max-w-xl  z-21">
+            {/* Título y descripción */}
+            <div className="ml-5 sm:ml-10 md:ml-20 lg:ml-35 mt-20 sm:mt-40 md:mt-60 relative z-20">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white max-w-xl">
                 Transform your garden into a personalized oasis
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-white mt-4 sm:mt-6 max-w-lg  z-21">
+              <p className="text-base sm:text-lg md:text-xl text-white mt-4 sm:mt-6 max-w-lg">
                 Professional landscaping, irrigation, pruning, structures and
                 more.
               </p>
-
-              {/* <button>Call to Action</button> */}
             </div>
 
-            {/** profile image */}
-
+            {/* Imagen de perfil */}
             <div
               className={`${
                 width > 1165
@@ -88,6 +84,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div>
           <div className="container mx-auto px-4 mt-8 md:px-10 mt-10 lg:px-20">
             <AnimatedStatsSection></AnimatedStatsSection>
