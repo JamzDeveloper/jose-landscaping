@@ -75,7 +75,7 @@ export default function Home() {
             >
               <div className="relative w-full h-full rounded-full">
                 <Image
-                  src="/images/image-banner.png"
+                  src="/images/imagebackprincipal-banner.jpeg"
                   alt="banner"
                   fill
                   className="object-cover rounded-full"
