@@ -37,7 +37,7 @@ export default function MapComponent() {
     <div className="w-full h-screen max-h-[600px] rounded-lg overflow-hidden shadow-lg">
       <MapContainer
         center={center}
-        zoom={6}
+        zoom={10}
         style={{ height: "100%", width: "100%" }}
         className="z-0"
       >

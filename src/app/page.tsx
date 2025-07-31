@@ -60,8 +60,8 @@ export default function Home() {
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-white mt-4 sm:mt-6 max-w-lg">
-                Professional landscaping, irrigation, pruning, structures and
-                more.
+                Professional landscaping , artificial grass, pavers, lighting,
+                irrigation, valves and more.
               </p>
             </div>
 

@@ -33,7 +33,7 @@ const ServiceSection: React.FC = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#00350FB2] font-bold leading-tight">
         Services</h2>
         </div>
-        <div className="relative mt-10 ">
+        <div className="relative mt-10">
           <PersonalityContainer data={responsiveData}></PersonalityContainer>
         </div>
       </div>

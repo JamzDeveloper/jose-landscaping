@@ -20,7 +20,7 @@ import { imageProperty } from "@/models/image";
     },
 
     {
-      height: 513,
+      height: 413,
       width: 450,
       href: "",
       title: "Irrigation",
@@ -31,7 +31,7 @@ import { imageProperty } from "@/models/image";
       height: 366,
       width: 450,
       href: "",
-      title: "Construction and structures",
+      title: "landscaping, construction and lighting",
 
       image: "/images/construction.jpg",
     },
